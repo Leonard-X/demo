@@ -61,11 +61,10 @@ public class BrandServiceimpl implements BrandService {
     public PageInfo<Brand> findPage(Brand brand, Integer page, Integer size) {
         //分页
         PageHelper.startPage(page,size);
-        //
+        //构造查询的条件
         Example example = createExample(brand);
         List<Brand> brands = brandMapper.selectByExample(example);
         //封装PageInfo
-        PageInfo<Brand> pageInfo = new PageInfo<>(brands);
         return new PageInfo<Brand>(brands);
     }
 

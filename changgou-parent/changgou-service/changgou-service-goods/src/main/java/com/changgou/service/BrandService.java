@@ -40,7 +40,7 @@ public interface BrandService {
     List<Brand> findList(Brand brand);
 
     /**
-     * 条件查询
+     * 分页
      * @param page:当前页
      * @param size:每页显示的条数
      * @return
