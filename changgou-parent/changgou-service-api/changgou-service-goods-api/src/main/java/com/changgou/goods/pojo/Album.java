@@ -1,8 +1,5 @@
 package com.changgou.goods.pojo;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -18,7 +15,7 @@ public class Album implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
 
-	private Long id;//编号
+	private Integer id;//编号
 
 
     @Column(name = "title")
@@ -30,12 +27,12 @@ public class Album implements Serializable{
 
 
 	//get方法
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 	//set方法
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	//get方法
